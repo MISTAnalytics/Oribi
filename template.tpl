@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -47,10 +47,11 @@ ___TEMPLATE_PARAMETERS___
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const log = require('logToConsole');
+const encodeUriComponent = require('encodeUriComponent');
 const injectScript = require('injectScript');
 
 const oribiId = data.oribi_id;
-const trackingUrl = "https://cdn.oribi.io/" + oribiId + "/oribi.js";
+const trackingUrl = "https://cdn.oribi.io/" + encodeUriComponent(oribiId) + "/oribi.js";
 
 const onSuccess = () => {
   log('Oribi loaded successfully.');
@@ -125,6 +126,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 11-10-2021 16:58:38
+Created on 19-10-2021 19:42:20
 
 
